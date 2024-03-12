@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
-const url = "mongodb+srv://admin01:Admin123456@cluster0.wunye3r.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0"
-const MONGODB_URI = process.env.MONGODB_URI || url
+const URI = "mongodb+srv://admin01:Admin123456@cluster0.wunye3r.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0"
+const MongoDB_URI = process.env.MONGODB_URI || URI
 mongoose.set('strictQuery', false)
-mongoose.connect(MONGODB_URI,
+mongoose.connect(MongoDB_URI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
