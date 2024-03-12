@@ -21,7 +21,7 @@ app.use(express.json())
 
 const cardRouter = require('./routes/cards')
 app.use('/', cardRouter)
-
-app.listen(4000, ()=>{
+const PORT = process.env.PORT || 4000
+app.listen(PORT, ()=>{
     console.log('server is runing........')
 })
