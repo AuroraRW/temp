@@ -4,17 +4,17 @@ const mongoose = require('mongoose')
 
 mongoose.set('strictQuery', false)
 mongoose.connect("mongodb+srv://admin01:Admin123456@cluster0.wunye3r.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0",
-                  {
-                    useNewUrlParser: true,
-                    useUnifiedTopology: true,
-                  },
-                  (err) => {
-                    if (err) {
-                      console.log(err);
-                    } else {
-                      console.log("Connected to MongoDB");
-                    }
-                  }
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("Connected to MongoDB");
+    }
+  }
 )
 
 app.use(express.json())
@@ -22,6 +22,6 @@ app.use(express.json())
 const cardRouter = require('./routes/cards')
 app.use('/', cardRouter)
 const PORT = process.env.PORT || 4000
-app.listen(PORT, ()=>{
-    console.log('server is runing........')
+app.listen(PORT, () => {
+  console.log('server is runing........')
 })
